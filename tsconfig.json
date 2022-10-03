@@ -11,6 +11,7 @@
       "@storage/*": ["./src/storage/*"],
       "@theme/*": ["./src/theme/*"],
       "@utils/*": ["./src/utils/*"]
-    }
+    },
+    "types": ["@types/styled-components-react-native"]
   }
 }
