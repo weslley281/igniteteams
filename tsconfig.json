@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "strictPropertyInitialization": false,
     "strict": true,
     "baseUrl": "./",
     "paths": {
@@ -9,6 +10,7 @@
       "@routes/*": ["./src/routes/*"],
       "@screens/*": ["./src/screens/*"],
       "@storage/*": ["./src/storage/*"],
+      "@theme/*": ["./src/theme/*"],
       "@utils/*": ["./src/utils/*"]
     },
     "types": ["@types/styled-components-react-native"]
