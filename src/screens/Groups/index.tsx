@@ -6,7 +6,7 @@ import { Container, Title } from './styles';
 export function Goups() {
   return (
     <Container>
-      <Header />
+      <Header showBackButton={false} />
       <Title>Groops</Title>
     </Container>
   );
