@@ -1,13 +1,14 @@
 import { Header } from '@components/Header';
+import { HighLight } from '@components/HighLight';
 import React from 'react';
 
-import { Container, Title } from './styles';
+import { Container } from './styles';
 
 export function Goups() {
   return (
     <Container>
       <Header showBackButton={false} />
-      <Title>Groops</Title>
+      <HighLight title="Turmas" subtitle="Jogue com a sua turma" />
     </Container>
   );
 }
