@@ -1,3 +1,4 @@
+import { GroupCard } from '@components/GroupCard';
 import { Header } from '@components/Header';
 import { HighLight } from '@components/HighLight';
 import React from 'react';
@@ -9,6 +10,7 @@ export function Goups() {
     <Container>
       <Header showBackButton={false} />
       <HighLight title="Turmas" subtitle="Jogue com a sua turma" />
+      <GroupCard title="Galera do Ignite" />
     </Container>
   );
 }

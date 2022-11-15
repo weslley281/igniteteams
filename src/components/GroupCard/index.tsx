@@ -1,7 +1,15 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Icon, Title } from './styles';
 
-export function GroupCard() {
-  return <Container></Container>;
+interface Props {
+  title: string;
+}
+export function GroupCard({ title }: Props) {
+  return (
+    <Container>
+      <Icon />
+      <Title>{title}</Title>
+    </Container>
+  );
 }
