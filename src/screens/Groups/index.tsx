@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
+import { FlatList } from 'react-native';
+
 import { Button } from '@components/Button';
 import { GroupCard } from '@components/GroupCard';
 import { Header } from '@components/Header';
 import { HighLight } from '@components/HighLight';
 import { ListEmpty } from '@components/ListEmpty';
-import React, { useState } from 'react';
-import { FlatList } from 'react-native';
 
 import { Container } from './styles';
 
