@@ -9,7 +9,7 @@ import { ListEmpty } from '@components/ListEmpty';
 
 import { Container } from './styles';
 
-export function Goups() {
+export function Groups() {
   const [groups, setGroups] = useState<string[]>([
     'Galera da Rocketseat',
     'Companheiros',
