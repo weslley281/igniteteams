@@ -11,6 +11,11 @@ import { ListEmpty } from '@components/ListEmpty';
 import { Button } from '@components/Button';
 
 import { Container, Form, HeaderList, NumberOfPlayers } from './styles';
+import { useRoute } from '@react-navigation/native';
+
+interface RouteParams {
+  group: string;
+}
 
 export function Players() {
   const [team, setTeam] = useState('Time A');
@@ -24,15 +29,14 @@ export function Players() {
     'Fodao99',
     'DetruidorGama',
   ]);
+  const { params } = useRoute();
+  const { group } = params as RouteParams;
 
   return (
     <Container>
       <Header showBackButton />
 
-      <HighLight
-        title="Nome da turma"
-        subtitle="Adcione a galera e prepare os times"
-      />
+      <HighLight title={group} subtitle="Adcione a galera e prepare os times" />
 
       <Form>
         <Input placeholder="Nome da Pesssoa" autoCorrect={false} />
