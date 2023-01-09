@@ -8,6 +8,8 @@ import { Input } from '@components/Input';
 import { Container, Content, Icon } from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { groupCreate } from '@storage/group/groupCreate';
+import { AppError } from '@utils/AppError';
+import { Alert } from 'react-native';
 
 export function NewGroup() {
   const { navigate } = useNavigation();
@@ -15,9 +17,21 @@ export function NewGroup() {
 
   async function handleNew() {
     try {
-      await groupCreate(group);
-      navigate('players', { group });
+      if (group.length > 0 && group.trim().length > 0) {
+        await groupCreate(group);
+        navigate('players', { group });
+      } else {
+        return Alert.alert('Novo Grupo', 'Informe uma turma');
+      }
     } catch (error) {
+      if (error instanceof AppError) {
+        Alert.alert('Erro no Cadastro', error.message);
+      } else {
+        Alert.alert(
+          'Erro no Cadastro',
+          'Não foi possivel cadastrar\nContate o Desenvolvedor'
+        );
+      }
       console.log(error);
     }
   }
