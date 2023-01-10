@@ -1,17 +1,16 @@
-import React from 'react';
+import { Container, Subtitle, Title } from './styles';
 
-import { Container, SubTitle, Title } from './styles';
-
-interface Props {
+type Props = {
   title: string;
   subtitle: string;
-}
+};
 
-export function HighLight({ title, subtitle }: Props) {
+export function Highlight({ title, subtitle }: Props) {
   return (
     <Container>
       <Title>{title}</Title>
-      <SubTitle>{subtitle}</SubTitle>
+
+      <Subtitle>{subtitle}</Subtitle>
     </Container>
   );
 }
